@@ -124,6 +124,11 @@ def notice():
 def coursesingle1():
     return render_template("coursesingle1.html",active=active)
 
+@app.route("/noticesingle",methods = ['GET','POST'])
+# @login_required
+def noticesingle():
+    return render_template("noticesingle.html",active=active)
+
 if __name__ == "__main__":
     from waitress import serve
     serve(app, host="0.0.0.0", port=8080)
