@@ -118,6 +118,12 @@ def events():
 # @login_required
 def notice():
     return render_template("notice.html",active=active)
+
+@app.route("/coursesingle1",methods = ['GET','POST'])
+# @login_required
+def coursesingle1():
+    return render_template("coursesingle1.html",active=active)
+
 if __name__ == "__main__":
     from waitress import serve
     serve(app, host="0.0.0.0", port=8080)
