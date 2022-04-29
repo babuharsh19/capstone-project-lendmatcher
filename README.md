@@ -52,15 +52,15 @@ pip install flask-login
 ```
 ## Website pages
 ## Investors Page
-<img align="center" alt="Coding" width="100%" height="100%" src="https://github.com/srishti-0613/Full-Stack/blob/main/site-images/investors.png">
+<img align="center" alt="Coding" width="100%" height="100%" src="https://github.com/babuharsh19/capstone-project-lendmatcher/blob/main/websiteimg/investors.png">
 
 ## Investor Detail Page
-<img align="center" alt="Coding" width="100%" height="100%" src="https://github.com/srishti-0613/Full-Stack/blob/main/site-images/investordetail1.png">
+<img align="center" alt="Coding" width="100%" height="100%" src="https://github.com/babuharsh19/capstone-project-lendmatcher/blob/main/websiteimg/investordetail1.png">
 
 ## Companies Page
-<img align="center" alt="Coding" width="100%" height="100%" src="https://github.com/srishti-0613/Full-Stack/blob/main/site-images/company.png">
+<img align="center" alt="Coding" width="100%" height="100%" src="https://github.com/babuharsh19/capstone-project-lendmatcher/blob/main/websiteimg/company.png">
 
 ## Contact Page
-<img align="center" alt="Coding" width="100%" height="100%" src="https://github.com/srishti-0613/Full-Stack/blob/main/site-images/contact.png">
+<img align="center" alt="Coding" width="100%" height="100%" src="https://github.com/babuharsh19/capstone-project-lendmatcher/blob/main/websiteimg/contact.png">
 
 
