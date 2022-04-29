@@ -34,6 +34,23 @@ class Users(db.Model,UserMixin):
     phone = db.Column(db.String(20), nullable=False)
     password = db.Column(db.String(20), nullable=False)
 
+class Companies(db.Model,UserMixin):
+    
+    sno = db.Column(db.Integer, primary_key=True, nullable=False)
+    title = db.Column(db.String(80), nullable=False)
+    subheading = db.Column(db.String(50), nullable=False)
+    form = db.Column(db.String(50), nullable=False)
+    registereddate = db.Column(db.String(50), nullable=False)
+    content = db.Column(db.String(300), nullable=False)
+
+class Admin(db.Model,UserMixin):
+    
+    id = db.Column(db.Integer, primary_key=True, nullable=False)
+    name = db.Column(db.String(80), nullable=False)
+    email = db.Column(db.String(200), nullable=False)
+    phone = db.Column(db.String(20), nullable=False)
+    password = db.Column(db.String(20), nullable=False)
+    
 @login_manager.user_loader  
 def load_user(user_id): 
     return Users.query.get(int(user_id))
@@ -128,6 +145,30 @@ def coursesingle1():
 # @login_required
 def noticesingle():
     return render_template("noticesingle.html",active=active)
+
+@app.route("/add", methods=['GET','POST'] )
+# @login_required
+def addcompany():
+    if(request.method ==  'POST'):
+      title = request.form.get('title')
+      subheading = request.form.get('subheading')
+      form = request.form.get('form')
+      content = request.form.get('content')
+      registereddate = request.form.get('registereddate') 
+      entry = Companies(title=title,subheading=subheading,form=form,content=content,registereddate=registereddate)
+      db.session.add(entry)
+      db.session.commit()
+      return redirect(url_for('/home'))  
+    return render_template('addcompany.html')
+
+@app.route("/delete/<sno>" , methods=['GET', 'POST'])
+@login_required
+def delete(sno):
+    if current_user.email==Admin.query.get('email'):
+        company = Companies.query.filter_by(sno=sno).first()
+        db.session.delete(company)
+        db.session.commit()
+    return redirect(url_for('/home'))
 
 if __name__ == "__main__":
     from waitress import serve

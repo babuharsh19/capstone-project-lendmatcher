@@ -23,6 +23,11 @@
     </li>
   </ul>
 </div>
+<script type="text/javascript">
+  function showMessage() {
+      alert("Please login as admin to do this operation");
+  }
+</script>
 {% endblock %}
 <!-- page title -->
 <section class="page-title-section overlay" data-background="{{ url_for('static',filename='images/backgrounds/page-title.jpg') }}">
@@ -157,6 +162,9 @@
     </div>
   </div>
 </div>
+<input type="button" id="btnShowMsg" value="Add New Company" onClick="showMessage()" />
+<input type="button" id="btnShowMsg" value="Edit Company" onClick="showMessage()" />
+<input type="button" id="btnShowMsg" value="Delete a Company" onClick="showMessage()" />
 <!-- /course list -->
     <!-- course list -->
 <!-- /course list -->
