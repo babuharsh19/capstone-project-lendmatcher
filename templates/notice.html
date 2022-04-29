@@ -23,6 +23,11 @@
     </li>
   </ul>
 </div>
+<script type="text/javascript">
+  function showMessage() {
+      alert("Please login to do this operation");
+  }
+</script>
 {% endblock %}
 <!-- page title -->
 <section class="page-title-section overlay" data-background="{{ url_for('static',filename='images/backgrounds/page-title.jpg') }}">
@@ -85,6 +90,9 @@
           </li>
         </ul>
       </div>
+      <input type="button" id="btnShowMsg" value="Add New Investor" onClick="showMessage()" />
+      <input type="button" id="btnShowMsg" value="Edit Investor" onClick="showMessage()" />
+      <input type="button" id="btnShowMsg" value="Delete an Investor" onClick="showMessage()" />
     </div>
   </div>
 </section>
